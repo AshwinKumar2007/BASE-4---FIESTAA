@@ -280,6 +280,23 @@ st.markdown("""
         background-color: #dc143c !important;
         border: 2px solid #ff1744 !important;
     }
+    
+    /* Centered title */
+    .centered-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        padding-top: 5vh;
+    }
+    .centered-title h1 {
+        font-size: 4rem !important;
+        color: #dc143c !important;
+        text-align: center !important;
+        margin: 0 !important;
+        font-weight: 700 !important;
+        letter-spacing: 2px;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -325,8 +342,8 @@ if not current_session:
     st.error("No active session. Please create one.")
     st.stop()
 
-# Compact header
-st.markdown("# 🧬 Biotech Learning Platform")
+# Centered title
+st.markdown('<div class="centered-title"><h1>🧬 BIOTECH AI ASSISTANT</h1></div>', unsafe_allow_html=True)
 
 # Top bar with session info
 st.markdown(f"""
